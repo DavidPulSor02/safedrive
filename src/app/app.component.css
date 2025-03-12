@@ -1,0 +1,66 @@
+nav {
+    background: #fefdfd;
+    /* Azul oscuro elegante */
+    padding: 15px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transform: translateY(-100%);
+    animation: slideIn 0.6s ease-out forwards;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: inline-block;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    /* Dorado refinado */
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 12px;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: white;
+}
+
+/* Línea animada debajo del enlace */
+li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+}
+
+li:hover::after {
+    width: 100%;
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+    }
+}

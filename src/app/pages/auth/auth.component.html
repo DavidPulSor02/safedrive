@@ -1,0 +1,14 @@
+<div class="auth-container">
+    <div class="auth-box">
+        <h1>Bienvenido</h1>
+        <p>Inicia sesión para continuar</p>
+
+        <form (ngSubmit)="login()">
+            <input type="password" formControlName="password" placeholder="Contraseña">
+            <button type="submit">Ingresar</button>
+        </form>
+
+
+        <p class="register-link">¿No tienes cuenta? <a href="#">Regístrate</a></p>
+    </div>
+</div>
